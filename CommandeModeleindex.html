@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soulman bonfils/Login</title>
+
+  <style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", "sans-serif";
+        box-sizing: boder-box;
+        transition: all.2s linear;
+        text-decoration: none;
+        border: none;
+    }
+    html  {
+        font-size: 92.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 7em;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        position: relative;
+    }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        background-color: grey;   
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 8%;
+        height: 40px;
+        box-shadow: 0 O 10px 0 rgba(0,0,0,0.2);
+    }
+    header .logo {
+        color:#1feacc;
+        font-size: 40px;
+        font-weight: lighter;
+    }
+    header .logo span {
+        color: #000;
+        font-size: 30px;
+        font-family: 'Lucida Sans Unicode' ;
+    } 
+    .menu {
+        display: flex;
+       
+    }
+    .menu li {
+        list-style: none;
+        margin: 0 15px;
+
+    }
+    .menu li a {
+        list-style: 14;
+        color: #000;
+        font-weight: 300;
+        transition: 0.2s;
+        font-size: 24px;
+
+    }
+    .menu li  a :hover{
+        color:#1feacc;
+    }
+    header button { 
+        background-color:#1feacc;
+        cursor: pointer;
+        color: #fff;
+        padding: 5px 25px;
+    }
+    #home{
+        margin-top: 20px;
+        height: calc(100vh - 50px);
+        padding: 0 8%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+/*Scrollbar CSS*/
+
+::-webkit-Scrollbar{
+    width:8px;
+    background-color:transparent ;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#1feacc;
+}
+
+#home .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home .right img{
+    width: 100%;
+}
+
+.section_title {
+    text-transform: uppercase;
+    position: relative;
+    font-size: 25px;
+}
+.section_title:before {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    content: "";
+    background-color: #1feacc;
+    width: 100%;
+    height: 5px;
+    border-radius: 6px;
+
+}
+.section_title:after {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    bottom: 0;
+    content: "";
+    background-color: #1feacc;
+    width: 100%;
+    height: 5px;
+    border-radius: 6px;
+
+}
+
+.localisations .form_contact {
+    width: 49%;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2) ;
+    padding: 15px;
+    border-radius: 6px;
+
+}
+.form_contact h3{
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 15px;
+}
+.localisations .form_contact form{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+.form_contact form input, textarea{
+    border: 1px solid #ccc;
+    width: 90%;
+    margin-bottom: 15px;
+    padding: 5px;
+    outline: 0;
+    border-radius: 6px;
+    font-size: 15px;
+    resize: none;
+
+}
+.form_contact form input[type="submit"]{
+    margin-bottom: 0;
+    background-color: #1feacc;
+    color: #fff;
+    border: 0;
+}
+
+footer{
+    background-color: #1feacc;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 24px;
+    
+}
+
+
+
+ </style>
+
+
+
+
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <p>SOULMAN <span>bonfils</span></p>
+    </div>
+    <ul Class="menu">
+        <li> <a href=file:///C:/TP%20PROGRAMATION%20WEB/model%20de%20tissus/index.html> <strong> Acceuil </strong></a>   </li>  
+        
+    </ul>
+     
+</header>
+
+<!--section contact-->
+
+
+<section id="home">
+    
+     <div class="form_contact">
+        <h3>Remplir ce formulaire passer une commande</h3>
+        <h1> </h1>
+
+        <form action="#">
+            <input type="text" placeholder="Votre nom ou prénom">
+            <input type="text" placeholder="Numéro du modele que vous désirez">
+            <input type="text" placeholder="Votre contact téléphonique">
+            <input type="text" placeholder="Votre adresse mail">
+            <input type="submit" value="Envoyer"> 
+
+        </form>
+    </div>
+
+    <div class="rigth">
+       
+    </div>
+</section >
+
+
+<footer>
+    <p> SOULMAN bonfils Copyright 2024 Yaoundé Cameroun</p>
+</footer>
+
+</body>
+</html>

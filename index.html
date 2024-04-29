@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soulman Bonfils Couture</title>
+
+  <style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: cursive;
+        box-sizing: boder-box;
+        transition: all.2s linear;
+        text-decoration: none;
+        border: none;
+    }
+    html  {
+        font-size: 80.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 7em;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        position: relative;
+    }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        background-color: grey;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 8%;
+        height: 50px;
+        box-shadow: 0 O 10px 0 rgba(0,0,0,0.2);
+    }
+    header .logo {
+        color:#1feacc;
+        font-size: 50px;
+        font-weight: lighter;
+    }
+    header .logo span {
+        color: #000;
+        font-size: 50px;
+        font-family: 'Lucida Sans Unicode' ;
+    } 
+    .menu {
+        display: flex;
+       
+    }
+    .menu li {
+        list-style: none;
+        margin: 0 15px;
+
+    }
+    .menu li a {
+        list-style: 14;
+        color: #000;
+        font-weight: 300;
+        transition: 0.2s;
+        font-size: 20px;
+
+    }
+    .menu li  a :hover{
+        color: #1feacc;
+    }
+    header button { 
+        background-color: #1feacc;
+        cursor: pointer;
+        color: #fff;
+        padding: 5px 25px;
+    }
+    #home{
+        margin-top: 50px;
+        height: calc(100vh - 50px);
+        padding: 0 8%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+/*Scrollbar CSS*/
+
+::-webkit-Scrollbar{
+    width:8px;
+    background-color:transparent ;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #1feacc;
+}
+
+#home .left {
+    width: 40%;
+}
+#home .left h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+#home .left h1 span {
+    color:#1feacc;
+}
+#home .left p{
+    margin-bottom: 30px;
+    color: #999;
+    font-size: 20px;
+}
+#home .left a {
+    background-color: #1feacc;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    transition: 0.5S;
+}
+#home .left a:hover{
+    background-color: green;
+}
+#home .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home .right img{
+    width: 100%;
+}
+
+#habits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.section_title {
+    text-transform: uppercase;
+    position: relative;
+    font-size: 25px;
+}
+.section_title:before {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    content: "";
+    background-color: #1feacc;
+    width: 100%;
+    height: 5px;
+    border-radius: 6px;
+
+}
+.section_title:after {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    bottom: 0;
+    content: "";
+    background-color: #1feacc;
+    width: 100%;
+    height: 5px;
+    border-radius: 6px;
+
+<!-- mon espace du premier niveau: -->
+
+}
+.images {
+    margin: 60px auto;
+    padding: 0 8%;
+}
+.images ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.images li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.665%;
+    transition: 0.5s;
+    height: 500px;
+    width: 28%;
+}
+.images li div {
+    width: 100%;
+    height: 60%;
+    margin-bottom: 7px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.3);
+}
+.images li div img {
+    height: 100%;
+    width: 100%
+}
+.images li:hover {
+    transform: scale(1.1);
+    margin: 20px;
+    }
+#habits li span.prix{
+    color:#1feae7;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#habits li a{
+    background-color: #1feac8;
+    color:#fff;
+    padding: 5px 20px;
+    font-size: 15px;
+} 
+#services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}  
+.list_services {
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.service {
+    width: 25%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    padding: 20px;
+    margin: 20px;
+
+}
+.service i{
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1feacc;
+    color:#fff;
+    border-radius: 50%;
+    margin-bottom:10px ;
+}
+.service{
+    font-size: 18px;
+    margin-bottom: 10px;
+
+} 
+.service p {
+    font-size: 12px;
+
+}
+.service a {
+    margin-top: 10px;
+    color: #1feacc;
+    padding: 5px 20px;
+    border: 1px solid #1feacc;
+    font-size: 12px;
+} 
+ 
+#contact {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 8%;
+    
+    
+}
+
+.localisations {
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    width: 100%;
+    margin: 100px 0;
+    height: 80vh; 
+}   
+.localisation {
+    width: 49%;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+}
+
+#contact .localisation span {
+    color:#1feacc;
+}
+
+.localisation iframe{
+    width: 100%;
+    border-radius: 6px;
+}
+.localisations .form_contact {
+    width: 49%;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2) ;
+    padding: 15px;
+    border-radius: 6px;
+
+}
+.localisations h3{
+    margin-bottom: 10px;
+    font-size: 18px
+}
+
+
+
+footer{
+    background-color: #1feacc;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 18px;
+}
+.div{
+    h1: center;
+
+}
+
+
+
+ </style>
+
+
+
+
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <p>SOULMAN <span>bonfils</span></p>
+    </div>
+    <ul Class="menu">
+        <li> <a href="index.html"> <strong> Acceuil </strong></a>   </li>  
+        <li> <a href="Serviceindex.html"> <strong> Services </strong></a>   </li>
+        <li> <a href="Modelindex.html"> <strong> Modeles </strong></a>   </li>
+        <li> <a href="LOGINindex.html"> <strong> Adresse </strong></a>   </li> 
+    </ul>
+    <button class="login_btn"><a href="LOGINindex.html"> LOGIN</a></button>  
+</header>
+<!--section Acceuil-->
+
+<section id="home">
+    <div class="left">
+       <h1> Faites-vous bien vêtir <span> et à bon prix </span> par <span>SOULMAN</span> bonfils couture</h1>
+        <p><strong> Avec son cadre chic,sophistiqué, saint et luxieux; son personnel qualifié et  acceuillant; SOULMAN bonfils est un salon de couture haut de game qui offre à sa clientèle
+            des vêtements de première classe à des prix modulables selon les bources dans des delais de livraison sans nul autre pareil.</strong> </p>  
+        <a href="COMMANDEindex.html">DEMANDER UN SERVICE</a>
+        </div>
+    <div class="rigth">
+        <img src="image de mon site/logoooo.jpg" alt="">
+    </div>
+</section >
+
+
+
+
+<!--section contact-->
+ 
+<section id="contact">
+    <h1 class="section_title"> Adresse</h1>
+    <div class="localisations">
+        <div class="localisation">
+            <p><strong>SOULMAN bonfils couture est situé en face camp sic TITI GARAGE </strong></p>
+            <p><strong>Adresse email <span> soulmanbonfilcouture@yahoo.fr </span> </strong></p>
+            <p><strong>Telephone <span> +237 677802948 </span> </strong></p>
+            <p>.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.6442852199198!2d11.54716627481281!3d3.8861943960875798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bc5bf9090f5f7%3A0x3f3b91badd9e0e39!2scamp%20sic%20titigarage!5e0!3m2!1sfr!2scm!4v1713741280710!5m2!1sfr!2scm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"></iframe> 
+        </div>    
+
+    </div>
+</section>
+
+
+<footer>
+    <p>  SOULMAN  bonfils Copyright 2024 Yaoundé Cameroun</p>
+</footer>
+
+
+</body></html>
